@@ -165,6 +165,7 @@ fn bits_to_bytes(bits: &[bool]) -> Vec<u8> {
 
 fn main() {
     let freqs = HashMap::from([
+        (b' ', 1900),
         (b'e', 1270),
         (b't', 910),
         (b'a', 820),
