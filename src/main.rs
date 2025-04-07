@@ -208,9 +208,7 @@ fn main() {
 
     let decoded = tree.decode(&encrypted_bits);
 
-    println!("Plaintext: {:?}", plaintext);
-    println!("Ciphertext (bytes): {:?}", ciphertext);
-    println!("Ciphertext (bits): {:?}", encrypted_bits);
+    println!("Plaintext: {:?}", std::str::from_utf8(plaintext.as_slice()));
     println!("Huffman-decoded: {:?}", std::str::from_utf8(&decoded));
 
     let mut bits = tree.encode(&decoded);
